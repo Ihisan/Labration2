@@ -17,17 +17,17 @@ Er implementation skall kunna ta en array av heltal och efter sortering med bubb
  */
 public class BubbleSort {
 
-    void bubbleSort(int arr[])
+    void bubbleSort(int array[])
     {
-        int n = arr.length;
+        int n = array.length;
         for (int i = 0; i < n-1; i++)
             for (int j = 0; j < n-i-1; j++)
-                if (arr[j] > arr[j+1])
+                if (array[j] > array[j+1])
                 {
                     // swap arr[j+1] and arr[j]
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
                 }
     }
     /* Prints the array */
