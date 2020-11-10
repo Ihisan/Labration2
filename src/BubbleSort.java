@@ -37,6 +37,7 @@ public class BubbleSort extends BinaryTree{
         int n = array.length;
         for (int i=0; i<n; ++i)
             System.out.print(array[i] + " ");
+
     }
 
 
