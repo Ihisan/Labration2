@@ -4,23 +4,23 @@ public class Main {
         BubbleSort ob = new BubbleSort ();
         BinaryTree leef = new BinaryTree ();
         int arr[] ={3,60,35,2,45,320,5};
-ob.printArray(arr);
-ob.bubbleSort(arr);
+//ob.printArray(arr);
+//ob.bubbleSort(arr);
         System.out.println("Array Before Bubble Sort");
-        System.out.println("Array After Bubble Sort");
-        for (int k : arr) {
+
+       /* //for (int k : arr) {
             System.out.print(k + " ");
         }
         System.out.println();
 //[3,6, 65,11, 5,1] -> [1, 3, 5, 7, 11, 65]
         //ob.bubbleSort();//sorting array elements using bubble sort
-
-
+        System.out.println("Array After Bubble Sort");
+        ob.bubbleSort(arr);
         for (int j : arr) {
-            System.out.print(j + " ");
+            System.out.print(j + " ");*/
 
 
-        /*ob.printArray(arr);
+
         ob.insert (1);
         ob.insert (10);
         ob.insert (9);
@@ -32,9 +32,9 @@ ob.bubbleSort(arr);
         //ob.printInOrderLeft ();
         ob.deleteKey (3);
         ob.printInOrderLeft ();
-        ob.printInOrderRight ();*/
+        ob.printInOrderRight ();
 
-            leef.insert(1);
+            /*leef.insert(1);
             leef.insert(10);
             leef.insert(9);
             leef.insert(12);
@@ -55,10 +55,10 @@ ob.bubbleSort(arr);
             System.out.println("\nDelete 30");
             leef.deleteKey(30);
             System.out.println("Inorder after deleting 30");
-            leef.printInOrderLeft();
+            leef.printInOrderLeft();*/
 
 
         }
     }
-}
+
 
