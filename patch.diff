@@ -1,0 +1,113 @@
+From fcd450badba4b96a3ef39d5ad87ac5615b9b3499 Mon Sep 17 00:00:00 2001
+From: "DESKTOP-E2HJ0GG\\Alalamiya" <mohammed.irheem@student.kyh.se>
+Date: Tue, 10 Nov 2020 15:44:08 +0100
+Subject: [PATCH] bubble sort
+
+---
+ src/BubbleSort.java |  2 +-
+ src/Main.java       | 68 +++++++++++++++++++++++++++------------------
+ 2 files changed, 42 insertions(+), 28 deletions(-)
+
+diff --git a/src/BubbleSort.java b/src/BubbleSort.java
+index 10ead06..ef71f4d 100644
+--- a/src/BubbleSort.java
++++ b/src/BubbleSort.java
+@@ -37,7 +37,7 @@ public class BubbleSort extends BinaryTree{
+         int n = array.length;
+         for (int i=0; i<n; ++i)
+             System.out.print(array[i] + " ");
+-        System.out.println();
++
+     }
+ 
+ 
+diff --git a/src/Main.java b/src/Main.java
+index 5bea94d..8cc8f48 100644
+--- a/src/Main.java
++++ b/src/Main.java
+@@ -3,9 +3,23 @@ public class Main {
+     public static void main(String[] args) {
+         BubbleSort ob = new BubbleSort ();
+         BinaryTree leef = new BinaryTree ();
+-        int arr[] = {38,27,43,3,9,82,10};
+-        ob.bubbleSort(arr);
+-        System.out.println("Sorted array");
++        int arr[] ={3,60,35,2,45,320,5};
++ob.printArray(arr);
++ob.bubbleSort(arr);
++        System.out.println("Array Before Bubble Sort");
++        System.out.println("Array After Bubble Sort");
++        for (int k : arr) {
++            System.out.print(k + " ");
++        }
++        System.out.println();
++//[3,6, 65,11, 5,1] -> [1, 3, 5, 7, 11, 65]
++        //ob.bubbleSort();//sorting array elements using bubble sort
++
++
++        for (int j : arr) {
++            System.out.print(j + " ");
++
++
+         /*ob.printArray(arr);
+         ob.insert (1);
+         ob.insert (10);
+@@ -20,31 +34,31 @@ public class Main {
+         ob.printInOrderLeft ();
+         ob.printInOrderRight ();*/
+ 
+-        leef.insert (1);
+-        leef.insert (10);
+-        leef.insert (9);
+-        leef.insert (12);
+-        leef.insert (14);
+-        leef.insert (17);
+-        leef.insert (4);
+-        leef.insert (30);
+-        System.out.println ("Inorder traversal of the given tree");
+-        leef.printInOrderLeft ();
+-        System.out.println ("\nDelete 1");
+-        leef.deleteKey (1);
+-        System.out.println ("Inorder traversal of the modified tree");
+-        leef.printInOrderLeft ();
+-        System.out.println ("\nDelete 12 ");
+-        leef.deleteKey (12);
+-        System.out.println ("Inorder after deleting 12");
+-        leef.printInOrderLeft ();
+-        System.out.println ("\nDelete 30");
+-        leef.deleteKey (30);
+-        System.out.println ("Inorder after deleting 30");
+-        leef.printInOrderLeft ();
+-
+-
++            leef.insert(1);
++            leef.insert(10);
++            leef.insert(9);
++            leef.insert(12);
++            leef.insert(14);
++            leef.insert(17);
++            leef.insert(4);
++            leef.insert(30);
++            System.out.println("Inorder traversal of the given tree");
++            leef.printInOrderLeft();
++            System.out.println("\nDelete 1");
++            leef.deleteKey(1);
++            System.out.println("Inorder traversal of the modified tree");
++            leef.printInOrderLeft();
++            System.out.println("\nDelete 12 ");
++            leef.deleteKey(12);
++            System.out.println("Inorder after deleting 12");
++            leef.printInOrderLeft();
++            System.out.println("\nDelete 30");
++            leef.deleteKey(30);
++            System.out.println("Inorder after deleting 30");
++            leef.printInOrderLeft();
+ 
+ 
++        }
+     }
+ }
++
+-- 
+2.27.0
+
