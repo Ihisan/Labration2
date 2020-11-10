@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import com.sun.source.tree.Tree;
 import org.w3c.dom.Node;
 
@@ -6,6 +7,15 @@ import java.util.Stack;
 
 public class BinaryTree {
      Node root;
+=======
+import org.w3c.dom.*;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class BinaryTree {
+    static Node root;
+>>>>>>> main
 
      static class Node {
         Node left;
@@ -14,10 +24,16 @@ public class BinaryTree {
 
         Node(int key) {
             this.key = key;
+            this.left = null;
+            this.right = null;
         }
     }
 
+<<<<<<< HEAD
         static int value(Node root) {
+=======
+        int value(Node root) {
+>>>>>>> main
             int min = root.key;
             while (root.left != null) {
                 min = root.left.key;
@@ -27,6 +43,10 @@ public class BinaryTree {
         }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
     public void insert(int key) {
         root = insertRec (root, key);
 
@@ -47,6 +67,7 @@ public class BinaryTree {
     }
 
 
+<<<<<<< HEAD
     public void deleteKey(int key){
         root = deleteRec(root, key);
     }
@@ -57,6 +78,18 @@ public class BinaryTree {
             tree.left=deleteRec (tree.left,key);
         else if(key > tree.key)
             tree.right = deleteRec (tree.right,key);
+=======
+    void deleteKey(int key){
+        root = deleteRec(root, key);
+    }
+
+    Node deleteRec(Node tree, int key){
+        if (tree == null) return tree;
+        if (key<tree.key)
+            tree.left=deleteRec (tree.left,key);
+        else if(key > tree.key)
+            tree.right = deleteRec (tree.left,key);
+>>>>>>> main
 
         else{
             if(tree.left == null) return tree.right;
@@ -69,12 +102,19 @@ public class BinaryTree {
         return tree;
     }
 
+<<<<<<< HEAD
     private void printInOrderLeft(Node tree){
+=======
+
+
+    public void printInOrderLeft(Node tree){
+>>>>>>> main
         if(tree == null){
             return;
         }
         printInOrderLeft (tree.left);
         System.out.print (tree.key + " ");
+<<<<<<< HEAD
         printInOrderLeft (tree.right);
     }
     public void printInOrderLeft(){
@@ -143,6 +183,8 @@ public class BinaryTree {
         }
         printInOrderLeft (tree.left);
         System.out.print (tree.key + " ");
+=======
+>>>>>>> main
         printInOrderLeft (tree.right);
     }
     public void printInOrderLeft(){
@@ -159,7 +201,11 @@ public class BinaryTree {
         printInOrderRight (tree.right);
         System.out.print (tree.key + " ");
         printInOrderRight (tree.left);
+<<<<<<< HEAD
     }*/
+=======
+    }
+>>>>>>> main
 
 
 
