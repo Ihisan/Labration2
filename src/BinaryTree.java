@@ -3,10 +3,18 @@ import org.w3c.dom.*;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/*
+2. Fortsätt med implementationen av ett binärt sökträd
+ a) Lägg till metoder för att ta bort ett element, tänk på fallen:
+    1. Noden har inga barn
+    2. Noden har ett barn
+    3. Noden har två barn
+    Tänk också på att ni kan behöva hantera fallet där det som skall tas bort ligger i rot-noden.
+ */
 public class BinaryTree {
-    static Node root;
+    Node root;
 
-    class Node {
+    static class Node {
         Node left;
         Node right;
         int key;
@@ -38,7 +46,7 @@ public class BinaryTree {
 
     public Node insertRec(Node tree, int key) {
         if (tree == null) {
-            tree = new Node (key);
+            tree = new Node(key);
             return tree;
         }
         if (key < tree.key) {
