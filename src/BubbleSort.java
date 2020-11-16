@@ -16,30 +16,46 @@ Er implementation skall kunna ta en array av heltal och efter sortering med bubb
     4. post-order
     För att visa att traverseringen fungerar räcker det att skriva ut värdet i varje nod
  */
-public class BubbleSort extends BinaryTree{
+public class BubbleSort {
 
-    void bubbleSort(int array[])
-    {
+    public static void bubbleSort(int array[]) {
         int n = array.length;
-        for (int i = 0; i < n-1; i++)
-            for (int j = 0; j < n-i-1; j++)
-                if (array[j] > array[j+1])
-                {
-                    //Sorterar
-                    int temp = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = temp;
+        int temp = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 1; j < (n - i); j++) {
+                if (array[j - 1] > array[j]) {
+                    //byter ut element
+                    temp = array[j - 1];
+                    array[j - 1] = array[j];
+                    array[j] = temp;
                 }
+            }
+        }
     }
-    //Skriver ut Array
-    void printArray(int array[])
-    {
-        int n = array.length;
-        for (int i=0; i<n; ++i)
+
+    public static void printarraybeforebubblesort(int array[]) {
+        System.out.println ("\nBefore bubblesort");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print (array[i] + " ");
+        }
+        System.out.println ();
+
+    }
+    public static void printarrayafterbubblesort(int array[]){
+        System.out.println("\nAfter bubblesort");
+        for(int i=0; i < array.length; i++){
             System.out.print(array[i] + " ");
-
+        }
     }
 
+    public static void main(String[] args) {
+       //====== BubbleSort===========
+        BubbleSort ob = new BubbleSort ();
+        int array[] = {38,27,43,30,9,82,103};
+        ob.printarraybeforebubblesort (array);
+        ob.bubbleSort (array);
+        printarrayafterbubblesort (array);
 
-
+    }
 }
+

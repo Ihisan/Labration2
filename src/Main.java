@@ -21,13 +21,6 @@ Er implementation skall kunna ta en array av heltal och efter sortering med bubb
 public class Main {
 
     public static void main(String[] args) {
-        //====== BubbleSort===========
-        BubbleSort ob = new BubbleSort ();
-        int array[] = {38,27,43,3,9,82,10};
-        ob.bubbleSort(array);
-        System.out.println("Sorted array");
-        ob.printarray (array);
-
         //=======Binary Search Tree========
         /*          30
                  /     \
@@ -60,21 +53,6 @@ public class Main {
         tree.deleteKey (30);
         System.out.println ("Inorder after deleting 30");
         tree.printInOrderLeft ();
-
-        //============ PreOrder,PostOrder, InOrder=======
-        BinaryTree.Node data = BinaryTree.data ();
-        System.out.print ("\nPrint PreOrder: ");
-        BinaryTree.printPreorder (data);
-        System.out.print ("\nPrint in PostOrder: -> ");
-        BinaryTree.printInorder (data);
-        System.out.print ("\nPrint InOrder:");
-        BinaryTree.printInorder (data);
-
-
-
-
-
-
-
+        
     }
 }
