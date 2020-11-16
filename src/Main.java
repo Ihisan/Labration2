@@ -22,13 +22,7 @@ public class Main {
 
     public static void main(String[] args) {
         //=======Binary Search Tree========
-        /*          30
-                 /     \
-        //      10      17
-               / \      / \
-        //    1  9     12  14
-
-        */
+        
         BinaryTree tree = new BinaryTree ();
         tree.insert (1);
         tree.insert (10);

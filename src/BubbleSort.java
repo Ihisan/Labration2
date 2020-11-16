@@ -49,7 +49,6 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-       //====== BubbleSort===========
         BubbleSort ob = new BubbleSort ();
         int array[] = {38,27,43,30,9,82,103};
         ob.printarraybeforebubblesort (array);
