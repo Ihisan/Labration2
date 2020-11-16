@@ -1,5 +1,3 @@
-import org.w3c.dom.Node;
-
 /*
 1. Implementera bubble sort
 Er implementation skall kunna ta en array av heltal och efter sortering med bubble sort resultera i en sorterad array, t.ex. [3,6, 65,11, 5,1] -> [1, 3, 5, 7, 11, 65]
